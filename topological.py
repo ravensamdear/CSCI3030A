@@ -131,6 +131,8 @@ def topSort(aList):
 			print "Added: " + str(aList[i])
 			tList.addEnd(aList[i])
 		i = i + 1
+	print "Nothing to the left is superset to anything on the right,"
+	print "and nothing to the right is subset to anything on the left."
 	tList.printList()
 
 
@@ -141,6 +143,17 @@ testList = [[1,2],[2,3],[1],[1,2,3],[1,3],[3],[2]]
 print testList
 topSort(testList)
 
+print
+
+testList = [[3, 6, 7], [10, 9, 3], [3], [1], [2], [1,2], [4,6], [10, 9], [10], [9], [6], [7], [5]]
+print testList
+topSort(testList)
+
+print
+
+testList = [[1, 5], [5], [1,3], [1, 3, 5], [4, 2, 3, 5], [4], [2, 4], [3, 4, 1, 5, 2]]
+print testList
+topSort(testList)
 
 #-----------------------Output----------------------------
 
